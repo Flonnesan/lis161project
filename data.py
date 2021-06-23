@@ -1,6 +1,6 @@
 import sqlite3
 
-db_path = 'pa.db'
+db_path = '/home/Flonnekers/lis161project/pa.db'
 
 
 # Connect to a database
