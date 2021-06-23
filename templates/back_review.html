@@ -25,11 +25,11 @@
 
                 <div class="col-md-6">
                 <label for="firstname" class="form-label">First Name</label>
-                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="{{ account.firstname }}" readonly>
+                <input type="text" class="form-control" name="firstname" id="firstname" value="{{ account.firstname }}" readonly>
                 </div>
                 <div class="col-md-6">
                 <label for="lastname" class="form-label">Last Name</label>
-                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="{{ account.lastname }}" readonly>
+                <input type="text" class="form-control" name="lastname" id="lastname" value="{{ account.lastname }}" readonly>
                 </div>
 
                 <div class="col-md-3">
@@ -54,62 +54,62 @@
 
                 <div class="col-md-2">
                     <label for="birthdate" class="form-label">Date of Birth</label>
-                    <input id="birthdate" name="birthdate" type="text" class="form-control" placeholder="{{ account.birthdate }}" readonly>
+                    <input id="birthdate" name="birthdate" type="text" class="form-control" value="{{ account.birthdate }}" readonly>
                 </div>
                 <div class="col-md-4">
                     <label for="birthplace" class="form-label">Place of Birth</label>
-                    <input id="birthplace" name="birthplace" type="text" class="form-control" placeholder="{{ account.birthplace }}" readonly>
+                    <input id="birthplace" name="birthplace" type="text" class="form-control" value="{{ account.birthplace }}" readonly>
                 </div>
 
                 <div class="col-md-3">
                     <label for="citizen" class="form-label">Country of Citizenship</label>
-                    <input id="citizen" name="citizen" type="text" class="form-control" placeholder="{{ account.citizenship }}" readonly>
+                    <input id="citizen" name="citizen" type="text" class="form-control" value="{{ account.citizenship }}" readonly>
                 </div>
 
                 <div class="col-md-3">
                     <label for="religion" class="form-label">Religion</label>
-                    <input id="religion" name="religion" type="text" class="form-control" placeholder="{{ account.religion }}" readonly>
+                    <input id="religion" name="religion" type="text" class="form-control" value="{{ account.religion }}" readonly>
                 </div>
 
                 <div class="col-md-3">
                     <label for="landlinephone" class="form-label">Landline Number</label>
-                    <input id="landlinephone" name="landlinephone" type="number" class="form-control" placeholder="{{ account.landline }}" readonly>
+                    <input id="landlinephone" name="landlinephone" type="number" class="form-control" value="{{ account.landline }}" readonly>
                 </div>
 
                 <div class="col-md-3"?>
                     <label for="mobilephone" class="form-label">Mobile Number</label>
-                    <input id="mobilephone" name="mobilephone" type="number" class="form-control" placeholder="{{ account.mobile }}" readonly>
+                    <input id="mobilephone" name="mobilephone" type="number" class="form-control" value="{{ account.mobile }}" readonly>
                 </div>
 
 
                 <div class="col-12">
                 <label for="street1" class="form-label">Street Address</label>
-                <input id="street1" name="street1" type="text" class="form-control" placeholder="{{ account.street1 }}" readonly>
+                <input id="street1" name="street1" type="text" class="form-control" value="{{ account.street1 }}" readonly>
               </div>
                 <div class="col-12">
                 <label for="street2" class="form-label">Street Address 2</label>
-                <input id="street2" name="street2" type="text" class="form-control"  placeholder="{{ account.street2 }}" readonly>
+                <input id="street2" name="street2" type="text" class="form-control"  value="{{ account.street2 }}" readonly>
               </div>
                 <div class="col-md-3">
                 <label for="city" class="form-label">City</label>
-                <input id="city" name="city" type="text" class="form-control" placeholder="{{ account.city }}" readonly>
+                <input id="city" name="city" type="text" class="form-control" value="{{ account.city }}" readonly>
               </div>
                 <div class="col-md-3">
                 <label for="state" class="form-label">State/Province</label>
-                <input id="state" name="state" type="text" class="form-control" placeholder="{{ account.state }}" readonly>
+                <input id="state" name="state" type="text" class="form-control" value="{{ account.state }}" readonly>
               </div>
                 <div class="col-md-3">
                     <label for="country" class="form-label">Country</label>
-                    <input id="country" name="country" type="text" class="form-control" placeholder="{{ account.country }}" readonly>
+                    <input id="country" name="country" type="text" class="form-control" value="{{ account.country }}" readonly>
               </div>
                 <div class="col-md-2">
                     <label for="zip" class="form-label">Zip</label>
-                    <input id="zip" name="zip" type="number" class="form-control" placeholder="{{ account.zip }}" readonly>
+                    <input id="zip" name="zip" type="number" class="form-control" value="{{ account.zip }}" readonly>
               </div>
 
                 <div class="col-md-12">
                     <label for="imageurl" class="form-label">Image</label>
-                    <input id="imageurl" name="imageurl" type="url" class="form-control" placeholder="{{ account.url }}" readonly>
+                    <input id="imageurl" name="imageurl" type="url" class="form-control" value="{{ account.url }}" readonly>
                 </div>
                 <div class="col-md-2">
                     <img src="{{ account.url }}" class="img-thumbnail" alt="">
@@ -156,7 +156,7 @@
 
                 <div class="col-md-12">
                     <label for="course" class="form-label">Course applied</label>
-                    <input id="course" name="course" type="text" class="form-control" placeholder="{{ account.course }}" readonly>
+                    <input id="course" name="course" type="text" class="form-control" value="{{ account.course }}" readonly>
                 </div>
 
                 <form action="{{ url_for('modify', email = account.email) }}" method="POST" class="row g-3">
