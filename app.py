@@ -44,8 +44,8 @@ def dupe():
 #Inputs the given account credentials into the accounts database
 @app.route('/creating', methods=['POST'])
 def account_creation():
-    account_data = {'email': request.form['email'],
-                    'password': request.form['password'],
+    account_data = {'email': request.form['email'].lower(),
+                    'password': request.form['password'].lower(),
                     'type': 'Regular'
                     }
 
@@ -60,8 +60,8 @@ def account_creation():
 #Verifies login credentials and upon success declares session variables
 @app.route("/verifying", methods=['POST'])
 def signin():
-    account_data = {'email': request.form['email'],
-                    'password': request.form['password'],
+    account_data = {'email': request.form['email'].lower(),
+                    'password': request.form['password'].lower(),
                     'type': 'Regular'
                     }
     verify = login_account(account_data['email'], account_data['password'])
