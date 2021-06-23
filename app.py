@@ -184,8 +184,8 @@ def modify(email):
         return redirect(url_for('application'))
 
 #Upon edit confirmation, updates the values in the database
-@app.route('/update', methods=['POST'])
-def update():
+@app.route('/update/<email>', methods=['POST'])
+def update(email):
     app_data = {
         'firstname': request.form['firstname'],
         'lastname': request.form['lastname'],
@@ -208,7 +208,7 @@ def update():
         'semester': request.form['semester'],
         'campus': request.form['campus'],
         'course': request.form['course'],
-        'email': session['email']
+        'email': email
     }
     update_application(app_data)
     return redirect(url_for('application'))
