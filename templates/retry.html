@@ -1,0 +1,38 @@
+<!--Login Page Copy when login credentials are wrong-->
+{% extends 'base.html' %}
+
+{% block contents %}
+
+<!-- Page Title -->
+<div class="container">
+<h1 style="color:maroon">Login</h1>
+    <div class="alert alert-danger" role="alert">
+        Unsuccessful login. Please recheck login details
+    </div>
+</div>
+
+
+
+<!-- Form field for email and password -->
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form action="{{ url_for('signin') }}" method="POST">
+                  <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" aria-describedby="emailHelp" required>
+                      <label for="email" class="form-label">Email Address</label>
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="form-floating mb-3">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="12345" aria-describedby="passwordHelp" required>
+                      <label for="password" class="form-label">Password</label>
+                    <div id="passwordHelp" class="form-text"><a href="">Forgot your password?</a></div>
+                  </div>
+                  <button type="submit" class="btn btn-success">LOG IN</button>
+            </form>
+            </div>
+    </div>
+</div>
+
+<br>
+{% endblock %}

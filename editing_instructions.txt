@@ -1,0 +1,16 @@
+If you want to add extra forms and fields to the application form then you MUST adjust these files and functions:
+1. application.html
+2. review.html
+3. back_review.html
+4. edit.html
+5. masterlist.html
+6. searhML.html
+7. noresult.html
+8. def apply() - from app.py
+9. def update() - from app.py
+10. def insert_application(app_data) - from data.py
+11. def update_application(app_data) - from data.py
+12. def field_search(field, search) - from data.py
+13. add new fields within table in SQL itself
+
+You must do this for EVERY new field added.

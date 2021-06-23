@@ -1,0 +1,40 @@
+<!--Account Registration Page Copy with Error when email is reused-->
+
+{% extends 'base.html' %}
+
+{% block contents %}
+
+<!-- Page Title -->
+<div class="container">
+<h1 style="color:maroon">Account Registration</h1>
+</div>
+
+
+
+<!-- Form field for email and password -->
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form action="{{ url_for('account_creation') }}" method="POST">
+                  <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" aria-describedby="emailHelp" required>
+                      <label for="email" class="form-label">Email Address</label>
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="form-floating mb-3">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="12345" aria-describedby="passwordHelp" required>
+                      <label for="password" class="form-label">Password</label>
+                      <div id="passwordHelp" class="form-text">Please remember your password</div>
+                  </div>
+                  <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="termsagreement" required>
+                      <label class="form-check-label" for="termsagreement">I agree to the terms and conditions</label>
+                  </div>
+                  <button type="submit" class="btn btn-success">Create Account</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br>
+{% endblock %}

@@ -1,0 +1,181 @@
+<!--review.html Form with back button (accessed through masterlist)-->
+
+{% extends 'base.html' %}
+
+{% block contents %}
+
+
+
+<div class="container">
+  <h1 class="text-center" style="color:maroon">University of the Philippines Online College Application Form</h1>
+
+  <br>
+
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{  url_for('masterlist') }}">Back</a></li>
+  </ol>
+  </nav>
+
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row g-3">
+                <h2 class="card-title">Personal Details</h2>
+
+                <div class="col-md-6">
+                <label for="firstname" class="form-label">First Name</label>
+                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="{{ account.firstname }}" readonly>
+                </div>
+                <div class="col-md-6">
+                <label for="lastname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="{{ account.lastname }}" readonly>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="sex" class="form-label">Sex assigned at birth</label>
+                    <select id="sex" name="sex" class="form-select" aria-label="gender" disabled>
+                        <option selected>{{ account.sex }}</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                <label for="marital" class="form-label">Marital Status</label>
+                <select id="marital" name="marital" class="form-select" disabled>
+                    <option selected>{{ account.civil }}</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Separated">Separated</option>
+                </select>
+              </div>
+
+                <div class="col-md-2">
+                    <label for="birthdate" class="form-label">Date of Birth</label>
+                    <input id="birthdate" name="birthdate" type="text" class="form-control" placeholder="{{ account.birthdate }}" readonly>
+                </div>
+                <div class="col-md-4">
+                    <label for="birthplace" class="form-label">Place of Birth</label>
+                    <input id="birthplace" name="birthplace" type="text" class="form-control" placeholder="{{ account.birthplace }}" readonly>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="citizen" class="form-label">Country of Citizenship</label>
+                    <input id="citizen" name="citizen" type="text" class="form-control" placeholder="{{ account.citizenship }}" readonly>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="religion" class="form-label">Religion</label>
+                    <input id="religion" name="religion" type="text" class="form-control" placeholder="{{ account.religion }}" readonly>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="landlinephone" class="form-label">Landline Number</label>
+                    <input id="landlinephone" name="landlinephone" type="number" class="form-control" placeholder="{{ account.landline }}" readonly>
+                </div>
+
+                <div class="col-md-3"?>
+                    <label for="mobilephone" class="form-label">Mobile Number</label>
+                    <input id="mobilephone" name="mobilephone" type="number" class="form-control" placeholder="{{ account.mobile }}" readonly>
+                </div>
+
+
+                <div class="col-12">
+                <label for="street1" class="form-label">Street Address</label>
+                <input id="street1" name="street1" type="text" class="form-control" placeholder="{{ account.street1 }}" readonly>
+              </div>
+                <div class="col-12">
+                <label for="street2" class="form-label">Street Address 2</label>
+                <input id="street2" name="street2" type="text" class="form-control"  placeholder="{{ account.street2 }}" readonly>
+              </div>
+                <div class="col-md-3">
+                <label for="city" class="form-label">City</label>
+                <input id="city" name="city" type="text" class="form-control" placeholder="{{ account.city }}" readonly>
+              </div>
+                <div class="col-md-3">
+                <label for="state" class="form-label">State/Province</label>
+                <input id="state" name="state" type="text" class="form-control" placeholder="{{ account.state }}" readonly>
+              </div>
+                <div class="col-md-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input id="country" name="country" type="text" class="form-control" placeholder="{{ account.country }}" readonly>
+              </div>
+                <div class="col-md-2">
+                    <label for="zip" class="form-label">Zip</label>
+                    <input id="zip" name="zip" type="number" class="form-control" placeholder="{{ account.zip }}" readonly>
+              </div>
+
+                <div class="col-md-12">
+                    <label for="imageurl" class="form-label">Image</label>
+                    <input id="imageurl" name="imageurl" type="url" class="form-control" placeholder="{{ account.url }}" readonly>
+                </div>
+                <div class="col-md-2">
+                    <img src="{{ account.url }}" class="img-thumbnail" alt="">
+                </div>
+
+                <br>
+
+                <h2 class="card-title">Application Information</h2>
+
+                <div class="col-md-3">
+                    <label for="applicationtype" class="form-label">Application Type</label>
+                    <select id="applicationtype" name="applicationtype" class="form-select" disabled>
+                        <option selected>{{ account.apptype }}</option>
+                        <option value="freshman">Freshman</option>
+                        <option value="transferee">Transferee</option>
+                        <option value="foreign">Foreign</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="semester" class="form-label">Semester</label>
+                    <select id="semester" name="semester" class="form-select" disabled>
+                        <option selected>{{ account.semester }}</option>
+                        <option value="1st Sem">First Semester</option>
+                        <option value="2nd Sem">Second Semester</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="campus" class="form-label">Campus</label>
+                    <select id="campus" name="campus" class="form-select" disabled>
+                        <option selected>{{ account.campus }}</option>
+                        <option value="UP Baguio">UP Baguio</option>
+                        <option value="UP Cebu">UP Cebu</option>
+                        <option value="UP Diliman">UP Diliman</option>
+                        <option value="UP Pampanga">UP Pampanga</option>
+                        <option value="UP Los Banos">UP Los Banos</option>
+                        <option value="UP Manila">UP Manila</option>
+                        <option value="UP Visayas">UP Visayas</option>
+                        <option value="UP Mindanao">UP Mindanao</option>
+                        <option value="UP OU">UP Open University</option>
+                    </select>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="course" class="form-label">Course applied</label>
+                    <input id="course" name="course" type="text" class="form-control" placeholder="{{ account.course }}" readonly>
+                </div>
+
+                <form action="{{ url_for('modify', email = account.email) }}" method="POST" class="row g-3">
+                    <div class="col-md-1">
+                        <button name="action" type="submit" class="btn btn-primary" value="Edit">Edit</button>
+                    </div>
+
+                    <div class="col-md-1">
+                        <button name="action" type="submit" class="btn btn-danger" value="Delete">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+
+
+{% endblock %}
